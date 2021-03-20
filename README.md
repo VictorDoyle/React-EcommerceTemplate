@@ -2,6 +2,13 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+Design inspiration was taken from : 
+https://dribbble.com/shots/14723014-E-Commerce-Web-Interaction-Domingo
+## Dependencies 
+- React.Js
+- React-router-dom (for routes)
+
+
 ## Available Scripts
 
 In the project directory, you can run:
