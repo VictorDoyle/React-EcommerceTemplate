@@ -1,7 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
+/* semantic ui import css  */
+import 'semantic-ui-css/semantic.min.css'
 import App from './App';
+/* testing */
 import reportWebVitals from './reportWebVitals';
 /* router */
 import { BrowserRouter as Router} from "react-router-dom"
