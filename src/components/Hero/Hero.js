@@ -8,52 +8,63 @@ import '../../styles/Hero.css'
 import { CSSTransitionGroup } from 'react-transition-group'
 
 function Hero () {
-const [currentProduct, setCurrentProduct] = useState(0);
+const [currentProduct, setCurrentProduct] = useState(1);
 /* animation base */
 const [bgColor, setBgColor] = useState();
+const [animationType, setAnimationType] = useState();
+const [animationDef, setAnimationDef] = useState();
 
 /* setting background color based on product */
-
 const productStyleCheck = () => {
-    if (currentProduct === 0) {
+    if (currentProduct === 1) {
         setBgColor("#4272f5")
-    } else if (currentProduct === 1) {
-        setBgColor("#c97f4b")
+        setAnimationType(
+            "expand 1.5s ease forwards"
+        )
     } else if (currentProduct === 2) {
+        setBgColor("#c97f4b")
+        setAnimationType(
+            "expand 1.5s ease forwards"
+        )
+    } else if (currentProduct === 3) {
         setBgColor("#65c9a6")
-    } else  if (currentProduct === 3) {
-        setBgColor("#cc6050")
+        setAnimationType(
+            "expand 1.5s ease forwards"
+        )
     } else  if (currentProduct === 4) {
-        setBgColor("#245e14")
+        setBgColor("#cc6050")
+        setAnimationType(
+            "expand 1.5s ease forwards"
+        )
     } else  if (currentProduct > 4) {
         return currentProduct
     }
     return currentProduct
 }
 /* setting Max page to show current product to 4 */
-useEffect(() => {
+    useEffect(() => {
     if (!currentProduct) {
         setCurrentProduct(0)
     } else setCurrentProduct(currentProduct)
-    
     if (currentProduct > 4) {
         setCurrentProduct(4)
     } 
     productStyleCheck()
     }, [currentProduct])
 
-
-
-
-
+/* remounting animation on click via unique key */
+    const getId = () => {
+        const id = currentProduct
+        console.log(id);
+        return id;
+    };
    
   
- 
-
 
     return (
-        <>
-        <div style={{backgroundColor: bgColor}}>
+        <div>
+
+        <div key={getId()} style={{backgroundColor: bgColor, animation: animationType}}>
 
     <Container>
         <Grid divided='vertically' className="heroGrid">
@@ -74,7 +85,7 @@ useEffect(() => {
         </div>
         
        
-        </>
+        </div>
     )
 }
 

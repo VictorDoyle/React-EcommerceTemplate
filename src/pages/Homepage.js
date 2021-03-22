@@ -3,6 +3,7 @@ import {React, useState, useEffect} from 'react';
 import '../styles/Hero.css'
 import Hero from '../components/Hero/Hero';
 import { Container } from 'semantic-ui-react';
+
 /* animation for product change */
 
   
@@ -15,7 +16,11 @@ function Homepage () {
 
     return (
         <>
+        
+  
+
         <Hero />
+      
       
         </>
     )
