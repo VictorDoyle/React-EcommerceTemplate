@@ -1,18 +1,14 @@
 .navbarMain {
-    margin-top: 2vh !important;
+    margin: 3vh !important;
     justify-content: center !important;
 }
 
-.centerColLinks a {
-    /* add top space */
-    top: 15px !important;
+.navbarMain a {
     margin: 25px;
 }
+
 
 .centerColLinks a:hover {
     border-bottom: 2px solid black;
 }
 
-.centerColLinks a:active {
-    border-bottom: 2px solid red;
-}

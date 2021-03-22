@@ -2,3 +2,18 @@
     border: none !important;
     box-shadow: none !important;
 }
+
+.heroProductNumber {
+    font-size: 100px;
+    padding-top: 10vh; 
+    padding-bottom: 10vh;
+    justify-content: left;
+}
+
+.heroProductDesc {
+    font-size: 25px;
+    font-weight: 300;
+    font-style: italic;
+    padding-top: 10vh;
+    padding-bottom: 10vh;
+}
