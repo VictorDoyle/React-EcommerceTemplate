@@ -1,10 +1,12 @@
 .navbarMain {
     margin: 3vh !important;
     justify-content: center !important;
+
 }
 
 .navbarMain a {
     margin: 25px;
+    color: white;
 }
 
 

@@ -2,40 +2,30 @@ import {React, useState, useEffect} from 'react';
 import HeroAccordion from './Accordion'
 import ShortProdBio from './ShortProdBio'
 /* styling */
-import { Grid,Header, Segment, TransitionablePortal, Icon, Container } from 'semantic-ui-react'  
+import { Grid, Icon, Container } from 'semantic-ui-react'  
 import '../../styles/Hero.css'
-/* animations */
-import { CSSTransitionGroup } from 'react-transition-group'
 
 function Hero () {
 const [currentProduct, setCurrentProduct] = useState(1);
 /* animation base */
 const [bgColor, setBgColor] = useState();
 const [animationType, setAnimationType] = useState();
-const [animationDef, setAnimationDef] = useState();
 
 /* setting background color based on product */
 const productStyleCheck = () => {
     if (currentProduct === 1) {
         setBgColor("#4272f5")
         setAnimationType(
-            "expand 1.5s ease forwards"
+            "expand 1.5s ease forwards",
+            /* FIXME: add color change to be consistent with expand Fx */
+            "colorChange 1.5s ease infinite"
         )
     } else if (currentProduct === 2) {
         setBgColor("#c97f4b")
-        setAnimationType(
-            "expand 1.5s ease forwards"
-        )
     } else if (currentProduct === 3) {
         setBgColor("#65c9a6")
-        setAnimationType(
-            "expand 1.5s ease forwards"
-        )
     } else  if (currentProduct === 4) {
         setBgColor("#cc6050")
-        setAnimationType(
-            "expand 1.5s ease forwards"
-        )
     } else  if (currentProduct > 4) {
         return currentProduct
     }
@@ -58,13 +48,18 @@ const productStyleCheck = () => {
         console.log(id);
         return id;
     };
-   
+    /* useEffect to set Global doc background color */
+    useEffect(() => {
+        document.body.style.backgroundColor = bgColor 
+        
+      
+    }, [bgColor])
   
 
     return (
         <div>
 
-        <div key={getId()} style={{backgroundColor: bgColor, animation: animationType}}>
+        <div key={getId()} style={{ animation: animationType}}>
 
     <Container>
         <Grid divided='vertically' className="heroGrid">
