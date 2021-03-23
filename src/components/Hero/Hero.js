@@ -4,6 +4,7 @@ import ShortProdBio from './ShortProdBio'
 /* styling */
 import { Grid, Icon, Container } from 'semantic-ui-react'  
 import '../../styles/Hero.css'
+import WingmanDrink from '../Product/WingmanDrink';
 
 function Hero () {
 const [currentProduct, setCurrentProduct] = useState(1);
@@ -65,20 +66,23 @@ const productStyleCheck = () => {
 
     <Container>
         <Grid divided='vertically' className="heroGrid" style={{ animation: contentAnimation}}>
-            <Grid.Row columns={2}>
+            <Grid.Row columns={3}>
 
                 <Grid.Column>
                     <ShortProdBio currentProduct = {currentProduct} />
-                </Grid.Column>
-
-                <Grid.Column>
-                    <HeroAccordion currentProduct = {currentProduct} />
+                    <Icon name='long arrow alternate left' size='huge' onClick={() => {setCurrentProduct(currentProduct - 1)}}/>
                     <Icon name='long arrow alternate right' size='huge' onClick={() => {setCurrentProduct(currentProduct + 1)}}/>
                 </Grid.Column>
-
+                <Grid.Column>
+                    <WingmanDrink currentProduct = {currentProduct} />
+                </Grid.Column>
+                <Grid.Column>
+                    <HeroAccordion currentProduct = {currentProduct} />
+                </Grid.Column>
             </Grid.Row>
         </Grid>
     </Container>
+    
         </div>
         
        

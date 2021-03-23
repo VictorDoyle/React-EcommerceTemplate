@@ -1,6 +1,7 @@
 import {React, useEffect, useState} from 'react'
 /* styling */
 import '../../styles/ShortProdBio.css'
+import WingmanDrink from '../Product/WingmanDrink'
 
 function ShortProdBio (props){
 /* keep track of current product to show */
@@ -36,10 +37,11 @@ console.log(props)
 
     return (
         <>
-      
+    
         <h1 className="heroProductNumber"> 0{productNum}</h1>
         <h1 className="heroProductDesc"> {productBio}</h1>
         
+    <WingmanDrink />
       
       </>
     )

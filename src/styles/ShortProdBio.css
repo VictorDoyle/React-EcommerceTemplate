@@ -4,6 +4,7 @@
 }
 
 .heroProductNumber {
+    color: whitesmoke;
     font-size: 100px;
     padding-top: 25vh; 
     padding-bottom: 10vh;
@@ -11,6 +12,7 @@
 }
 
 .heroProductDesc {
+    color: whitesmoke;
     font-size: 25px;
     font-weight: 300;
     font-style: italic;
