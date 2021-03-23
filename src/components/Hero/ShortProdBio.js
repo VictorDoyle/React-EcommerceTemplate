@@ -10,19 +10,13 @@ const [productBio, setProductBio] = useState("")
 
 /* setting current bio to current product */
 const productBioCheck = () => {
-    if (productNum === 0) {
+    if (productNum === 1) {
         setProductBio("The Perfect Combination of fresh ingredients to spice up your morning")
-    } else if (productNum === 1) {
-        setProductBio("A Fresh punch of tangy green apple and tart blueberry to jolt your senses back to life")
     } else if (productNum === 2) {
+        setProductBio("A Fresh punch of tangy green apple and tart blueberry to jolt your senses back to life")
+    } else if (productNum === 3) {
         setProductBio("testing product 3")
-    } else  if (productNum === 3) {
-        setProductBio("testing product 4")
-    } else  if (productNum === 4) {
-        setProductBio("testing product 5")
-    } else  if (productNum > 4) {
-        return productNum
-    }
+    }  
     return productBio
 }
 

@@ -8,22 +8,30 @@ import '../../styles/Hero.css'
 function Hero () {
 const [currentProduct, setCurrentProduct] = useState(1);
 /* animation base */
-const [animationType, setAnimationType] = useState();
+const [slidePosition, setslidePosition] = useState();
+const [backgroundColor, setBackgroundColor ] = useState();
 
 /* setting background color based on product */
 const productStyleCheck = () => {
     if (currentProduct === 1) {
-        setAnimationType(
-            "0 -100%",
+        setslidePosition(
+            "0 50%",
+        )
+        setBackgroundColor(
+            "linear-gradient(to right , #4272f5 50%, #c97f4b 50%)"
         )
     } else if (currentProduct === 2) {
-        setAnimationType(
-            "-100% -200%",
+        setslidePosition(
+            "100% 200%",
         )
     } else if (currentProduct === 3) {
-        setAnimationType(
-            "-200% -300%",
+        setslidePosition(
+            "200% 300%",
         )
+        setBackgroundColor(
+            "linear-gradient(to right , #65c9a6 50%, #cc6050 50%)"
+        )
+        
     }
     return currentProduct
 }
@@ -32,8 +40,8 @@ const productStyleCheck = () => {
     if (!currentProduct) {
         setCurrentProduct(0)
     } else setCurrentProduct(currentProduct)
-    if (currentProduct > 4) {
-        setCurrentProduct(4)
+    if (currentProduct > 3) {
+        setCurrentProduct(3)
     } 
      productStyleCheck()
     }, [currentProduct])
@@ -47,9 +55,9 @@ const productStyleCheck = () => {
   
 
     return (
-    <div>
+    <div >
 
-        <div key={getId()} style={{ backgroundPosition: animationType}} className="heroBoxContainer">
+        <div key={getId()} style={{ backgroundPosition: slidePosition, backgroundImage: backgroundColor }} className="heroBoxContainer">
 
     <Container>
         <Grid divided='vertically' className="heroGrid">

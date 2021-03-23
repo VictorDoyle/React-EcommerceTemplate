@@ -1,35 +1,13 @@
 .heroGrid {
-    height: 80vh;
+    height: 100vh;
 }
 
 
-
-/* for animation import */
-
-
-  @keyframes expand {
-    0% {
-      transform: translateX(1400px);
-    }
-    100% {
-      transform: translateX(0px);
-    }
-  }
-
-
 .heroBoxContainer {
-    background-size: 100% 200%;
-    background-image: linear-gradient(to bottom , #4272f5 50%, #c97f4b 50%);
+    background-size: 200% 100%;
+    background-image: linear-gradient(to right , #4272f5 50%, #c97f4b 50%);
     -webkit-transition: background-position 1s;
     -moz-transition: background-position 1s;
     transition: background-position 1s;
 }
-
-/* next color  */
-/* #65c9a6 */
-/* #cc6050 */
-
-/* .heroBoxContainer {
-    background-position: 0 -100%;
-} */
 
