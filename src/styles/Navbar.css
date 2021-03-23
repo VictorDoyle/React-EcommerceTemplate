@@ -1,16 +1,26 @@
-.navbarMain {
-    margin: 3vh !important;
-    justify-content: center !important;
+.navbarContainer {
+    display: flex;
+}
 
+
+.navbarMain {
+    position: absolute;
+    background-color: transparent;
+    justify-content: center !important;
+    width: 100%;
+    top: 50px;
+    left: 50px;
+    z-index: 100;
 }
 
 .navbarMain a {
     margin: 25px;
     color: white;
+    font-weight: 700;
 }
 
-
+/* FIXME: change hover style */
 .centerColLinks a:hover {
-    border-bottom: 2px solid black;
+    border-bottom: 2px solid white;
 }
 

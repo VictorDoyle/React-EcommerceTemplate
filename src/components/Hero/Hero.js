@@ -10,6 +10,7 @@ const [currentProduct, setCurrentProduct] = useState(1);
 /* animation base */
 const [slidePosition, setslidePosition] = useState();
 const [backgroundColor, setBackgroundColor ] = useState();
+const [contentAnimation, setContentAnimation ] = useState();
 
 /* setting background color based on product */
 const productStyleCheck = () => {
@@ -20,6 +21,9 @@ const productStyleCheck = () => {
         setBackgroundColor(
             "linear-gradient(to right , #4272f5 50%, #c97f4b 50%)"
         )
+        setContentAnimation(
+            "expand 1.5s ease forwards"
+        )
     } else if (currentProduct === 2) {
         setslidePosition(
             "100% 200%",
@@ -29,7 +33,7 @@ const productStyleCheck = () => {
             "200% 300%",
         )
         setBackgroundColor(
-            "linear-gradient(to right , #65c9a6 50%, #cc6050 50%)"
+            "linear-gradient(to right , #65c9a6 50%, #c97f4b 50%)"
         )
         
     }
@@ -57,10 +61,10 @@ const productStyleCheck = () => {
     return (
     <div >
 
-        <div key={getId()} style={{ backgroundPosition: slidePosition, backgroundImage: backgroundColor }} className="heroBoxContainer">
+        <div key={getId()} style={{ backgroundPosition: slidePosition, backgroundImage: backgroundColor}} className="heroBoxContainer">
 
     <Container>
-        <Grid divided='vertically' className="heroGrid">
+        <Grid divided='vertically' className="heroGrid" style={{ animation: contentAnimation}}>
             <Grid.Row columns={2}>
 
                 <Grid.Column>

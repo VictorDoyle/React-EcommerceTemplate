@@ -18,7 +18,9 @@ class Navbar extends Component {
 
     return (
         <>
-        
+        <div className="navbarContainer">
+
+       
     <Grid className="navbarMain">
         <Grid.Row>
         <Grid.Column width={4}>
@@ -84,6 +86,7 @@ class Navbar extends Component {
         </Grid.Column>
         </Grid.Row>   
     </Grid>
+    </div>
       </>
     )
   }

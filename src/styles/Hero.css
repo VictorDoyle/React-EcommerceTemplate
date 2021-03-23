@@ -1,6 +1,15 @@
 .heroGrid {
-    height: 100vh;
+  height: 100vh;
 }
+
+@keyframes expand {
+    0% {
+      transform: translateX(1400px);
+    }
+    100% {
+      transform: translateX(0px);
+    }
+  }
 
 
 .heroBoxContainer {
