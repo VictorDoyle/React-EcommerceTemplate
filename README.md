@@ -50,3 +50,7 @@ You don’t have to ever use `eject`. The curated feature set is suitable for sm
 ### Deployment
 
 This React App is Deployed via Vercel on the following link: [url here]
+
+### Issues/Fixes Required
+
+- Styling on homepage needs to trigger on ref event (when background color reaches <div> containing hero content, update hero content)
