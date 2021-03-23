@@ -40,15 +40,15 @@ const productStyleCheck = () => {
     }
     return currentProduct
 }
+
+
 /* setting Max page to show current product to 4 */
     useEffect(() => {
-    if (!currentProduct) {
-        setCurrentProduct(0)
-    } else setCurrentProduct(currentProduct)
+    setCurrentProduct(currentProduct)
     if (currentProduct > 3) {
         setCurrentProduct(3)
     } 
-     productStyleCheck()
+    productStyleCheck()
     }, [currentProduct])
 
 /* remounting animation on click via unique key */
@@ -64,24 +64,25 @@ const productStyleCheck = () => {
 
         <div key={getId()} style={{ backgroundPosition: slidePosition, backgroundImage: backgroundColor}} className="heroBoxContainer">
 
-    <Container>
         <Grid divided='vertically' className="heroGrid" style={{ animation: contentAnimation}}>
-            <Grid.Row columns={3}>
+            <Grid.Row columns={3} >
 
-                <Grid.Column>
+                <Grid.Column  width={5}>
                     <ShortProdBio currentProduct = {currentProduct} />
                     <Icon name='long arrow alternate left' size='huge' onClick={() => {setCurrentProduct(currentProduct - 1)}}/>
                     <Icon name='long arrow alternate right' size='huge' onClick={() => {setCurrentProduct(currentProduct + 1)}}/>
                 </Grid.Column>
-                <Grid.Column>
+
+                <Grid.Column  width={6}>
                     <WingmanDrink currentProduct = {currentProduct} />
                 </Grid.Column>
-                <Grid.Column>
+
+                <Grid.Column  width={5}>
                     <HeroAccordion currentProduct = {currentProduct} />
                 </Grid.Column>
             </Grid.Row>
         </Grid>
-    </Container>
+  
     
         </div>
         

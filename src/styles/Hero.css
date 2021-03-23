@@ -1,6 +1,13 @@
-.heroGrid {
-  height: 100vh;
+
+
+.heroBoxContainer {
+  background-size: 200% 100%;
+  background-image: linear-gradient(to right , #4272f5 100%, #c97f4b 100%);
+  -webkit-transition: background-position 1s;
+  -moz-transition: background-position 1s;
+  transition: background-position 1s;
 }
+
 
 @keyframes expand {
     0% {
@@ -10,13 +17,3 @@
       transform: translateX(0px);
     }
   }
-
-
-.heroBoxContainer {
-    background-size: 200% 100%;
-    background-image: linear-gradient(to right , #4272f5 50%, #c97f4b 50%);
-    -webkit-transition: background-position 1s;
-    -moz-transition: background-position 1s;
-    transition: background-position 1s;
-}
-

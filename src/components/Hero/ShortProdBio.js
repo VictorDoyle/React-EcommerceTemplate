@@ -25,7 +25,7 @@ const productBioCheck = () => {
 /* useEffect keeping track of which product user is on */
 useEffect(() => {
 if (!props.currentProduct) {
-    setProductNum(0)
+    setProductNum(1)
 } else setProductNum(props.currentProduct)
 
 productBioCheck()
@@ -40,9 +40,6 @@ console.log(props)
     
         <h1 className="heroProductNumber"> 0{productNum}</h1>
         <h1 className="heroProductDesc"> {productBio}</h1>
-        
-    <WingmanDrink />
-      
       </>
     )
 } 
