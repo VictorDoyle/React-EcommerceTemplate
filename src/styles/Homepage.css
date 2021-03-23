@@ -1,11 +1,13 @@
 
 
 .heroBoxContainer {
-  background-size: 200% 100%;
-  background-image: linear-gradient(to right , #4272f5 100%, #c97f4b 100%);
+  background-size: 200% 500%;
+  z-index: 1;
+  background-image: linear-gradient(to right , #4272f5 50%, #c97f4b 50%);
   -webkit-transition: background-position 1s;
   -moz-transition: background-position 1s;
   transition: background-position 1s;
+  
 }
 
 

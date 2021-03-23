@@ -9,7 +9,6 @@ import lightRedBull from '../../media/lightRedBull.png'
 
 function WingmanDrink (props) {
     const [productImage, setproductImage] = useState();
-console.log(props)
     const showProductCheck = () => {
         if (props.currentProduct === 1) {
             setproductImage(
@@ -40,6 +39,7 @@ console.log(props)
     <div className="showProductContainer">
 
     <Image className="productImage" src={productImage}></Image>
+    
     </div>
 
     </>
