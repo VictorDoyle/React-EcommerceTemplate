@@ -8,26 +8,22 @@ import '../../styles/Hero.css'
 function Hero () {
 const [currentProduct, setCurrentProduct] = useState(1);
 /* animation base */
-const [bgColor, setBgColor] = useState();
 const [animationType, setAnimationType] = useState();
 
 /* setting background color based on product */
 const productStyleCheck = () => {
     if (currentProduct === 1) {
-        setBgColor("#4272f5")
         setAnimationType(
-            "expand 1.5s ease forwards",
-            /* FIXME: add color change to be consistent with expand Fx */
-            "colorChange 1.5s ease infinite"
+            "0 -100%",
         )
     } else if (currentProduct === 2) {
-        setBgColor("#c97f4b")
+        setAnimationType(
+            "-100% -200%",
+        )
     } else if (currentProduct === 3) {
-        setBgColor("#65c9a6")
-    } else  if (currentProduct === 4) {
-        setBgColor("#cc6050")
-    } else  if (currentProduct > 4) {
-        return currentProduct
+        setAnimationType(
+            "-200% -300%",
+        )
     }
     return currentProduct
 }
@@ -39,7 +35,7 @@ const productStyleCheck = () => {
     if (currentProduct > 4) {
         setCurrentProduct(4)
     } 
-    productStyleCheck()
+     productStyleCheck()
     }, [currentProduct])
 
 /* remounting animation on click via unique key */
@@ -48,18 +44,12 @@ const productStyleCheck = () => {
         console.log(id);
         return id;
     };
-    /* useEffect to set Global doc background color */
-    useEffect(() => {
-        document.body.style.backgroundColor = bgColor 
-        
-      
-    }, [bgColor])
   
 
     return (
-        <div>
+    <div>
 
-        <div key={getId()} style={{ animation: animationType}}>
+        <div key={getId()} style={{ backgroundPosition: animationType}} className="heroBoxContainer">
 
     <Container>
         <Grid divided='vertically' className="heroGrid">
@@ -80,7 +70,7 @@ const productStyleCheck = () => {
         </div>
         
        
-        </div>
+    </div>
     )
 }
 

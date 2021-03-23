@@ -15,3 +15,21 @@
       transform: translateX(0px);
     }
   }
+
+
+.heroBoxContainer {
+    background-size: 100% 200%;
+    background-image: linear-gradient(to bottom , #4272f5 50%, #c97f4b 50%);
+    -webkit-transition: background-position 1s;
+    -moz-transition: background-position 1s;
+    transition: background-position 1s;
+}
+
+/* next color  */
+/* #65c9a6 */
+/* #cc6050 */
+
+/* .heroBoxContainer {
+    background-position: 0 -100%;
+} */
+
