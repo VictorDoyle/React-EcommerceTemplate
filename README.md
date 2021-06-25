@@ -5,6 +5,11 @@ After browsing Dribbble, I found the following E commerce Mockup that I wanted t
 Design inspiration was taken from : 
 https://dribbble.com/shots/14723014-E-Commerce-Web-Interaction-Domingo
 
+#### Snapshot of Landing Page and Product Showcase
+![Image of Project LandingPage](https://github.com/VictorDoyle/React-EcommerceTemplate/blob/master/src/media/landingOne.png?raw=true)
+![Image of Project SecondProduct](https://github.com/VictorDoyle/React-EcommerceTemplate/blob/master/src/media/landingTwo.png?raw=true)
+
+
 ## Dependencies 
 - React.Js
 - React-router-dom (for routes)
